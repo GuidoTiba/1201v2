@@ -1,0 +1,12 @@
+init satoshi 100 10
+transfer satoshi guido 50 martu 20
+transfer guido pedro 20
+mine 10
+transfer pedro satoshi 10
+transfer satoshi guido 20
+mine 10
+save Tests/output_file.txt
+balance pedro
+balance satoshi
+balance guido
+balance martu
