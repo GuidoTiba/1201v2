@@ -7,8 +7,11 @@ Fernandez Irungaray, Martina
 Tibaudin, Guido (yo)
 
 El programa se puede correr ejecutando en linea de comandos:
+
 make (para compilar los archivos)
+
 ./tp1 (para ejecutar el programa)
+
 
 Para interactuar con el programa utilizar las siguientes funciones: 
 
