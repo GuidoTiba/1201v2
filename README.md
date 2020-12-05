@@ -20,27 +20,28 @@ make (para compilar los archivos)
 
 Para interactuar con el programa utilizar las siguientes funciones: 
 
-  -init <user><value><bits>: Genera un bloque génesis para inicializar la Algochain. El bloque
+  -init 'user' 'value' 'bits': Genera un bloque génesis para inicializar la Algochain. El bloque
 asignará un monto inicial value a la dirección del usuario user. El bloque deberá minarse con la
 dificultad bits indicada. Retorna el hash del bloque génesis.
   
-  -transfer <src><dst1><value1>... <dstN><valueN>: Genera una nueva transacción en la
+  -transfer 'src' 'dst1' 'value1'... 'dstN' 'valueN': Genera una nueva transacción en la
 que el usuario src transferirá fondos a una cantidad N de usuarios, a cada uno su correspondiente
 value. Retorna el Hash de la transacción en caso de éxito y FAIL en caso de falla por invalidez.
   
-  -mine <bits>: Ensambla y agrega a la Algochain un nuevo bloque a partir de todas las
+  -mine 'bits': Ensambla y agrega a la Algochain un nuevo bloque a partir de todas las
 transacciones en la mempool. El minado se efectúa con la dificultad dada por bits. Devuelve
 el hash del bloque en caso de éxito y FAIL en caso de falla.
   
-  -balance <user> Retorna el saldo disponible en la dirección del usuario user.
-  -block <id>:Consulta la información del bloque representado por el hash id. Retorna los campos
+  -balance 'user' Retorna el saldo disponible en la dirección del usuario user.
   
-del bloque en caso de éxito y FAIL en caso de recibir un hash inválido.
-  -txn <id>:Consulta la información de la transacción representada por el hash id. Retorna los
+  -block 'id':Consulta la información del bloque representado por el hash id. Retorna los campos
+ del bloque en caso de éxito y FAIL en caso de recibir un hash inválido.
+  
+  -txn 'id':Consulta la información de la transacción representada por el hash id. Retorna los
 campos de la transacción en caso de éxito y FAIL en caso de recibir un hash inválido.
   
-  -load <filename>: Carga la Algochain presente en el archivo. En caso de éxito devuelve el hash
+  -load 'filename': Carga la Algochain presente en el archivo. En caso de éxito devuelve el hash
 del ultimo bloque y FAIL en caso de falla.
   
-  -save <filename>: Guarda una copia de la Algochain en su estado actual al archivo indicado.
+  -save 'filename': Guarda una copia de la Algochain en su estado actual al archivo indicado.
 Retorna OK en caso de éxito y FAIL en caso de falla
